@@ -47,9 +47,11 @@ public class MusicOrganizer
      */
     public void listFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        validIndex(index);
+        if(validIndex ==true) {
             String filename = files.get(index);
             System.out.println(filename);
+            
         }
     }
 
@@ -59,7 +61,8 @@ public class MusicOrganizer
      */
     public void removeFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        validIndex(index);
+        if(validIndex ==true) {
             files.remove(index);
         }
     }
@@ -70,7 +73,7 @@ public class MusicOrganizer
     public void checkIndex(int index)
     {
         if(index < 0 || index >= files.size()){
-            System.out.println("Error rango dado no es correcto,introducir rango de 0 a " + files.size());
+            System.out.println("Error rango dado no es correcto,introducir rango de 0 a " + (files.size()-1));
 
         }
     }
@@ -89,6 +92,11 @@ public class MusicOrganizer
             validIndex=true;
         }
 
+    }
+    
+    public void getValidIndex()
+    {
+        System.out.println(validIndex);
     }
 
 }
