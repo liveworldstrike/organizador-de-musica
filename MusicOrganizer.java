@@ -60,7 +60,7 @@ public class MusicOrganizer
         }
     }
     /**
-     * 
+     * metodo para comprobar la organizacion y comprobacion de los incides si son correctos.
      */
     public void checkIndex(int index)
     {
